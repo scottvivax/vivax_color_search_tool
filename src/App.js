@@ -1,5 +1,13 @@
+import Map from "./components/Map";
+import Filter from "./components/Filter";
+
 function App() {
-  return <div></div>;
+  return (
+    <>
+      <Map />
+      <Filter />
+    </>
+  );
 }
 
 export default App;
