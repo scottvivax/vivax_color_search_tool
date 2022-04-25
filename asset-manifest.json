@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.js": "/vivax_color_search_tool/static/js/main.43e25f6d.js",
+    "main.js": "/vivax_color_search_tool/static/js/main.151c089d.js",
+    "static/media/vivax_logo.png": "/vivax_color_search_tool/static/media/vivax_logo.82edb294b15baa5eb4c3.png",
+    "static/media/house_pin.png": "/vivax_color_search_tool/static/media/house_pin.5a47b0171c54e47f2bff.png",
     "index.html": "/vivax_color_search_tool/index.html",
-    "main.43e25f6d.js.map": "/vivax_color_search_tool/static/js/main.43e25f6d.js.map"
+    "main.151c089d.js.map": "/vivax_color_search_tool/static/js/main.151c089d.js.map"
   },
   "entrypoints": [
-    "static/js/main.43e25f6d.js"
+    "static/js/main.151c089d.js"
   ]
 }
