@@ -1,4 +1,5 @@
 import { Marker, useMap } from "react-leaflet";
+import { HouseIcon } from "./Icons";
 import bounded_pins from "../helpers/bounded_pins";
 import pins from "../data/watson_color_data_2022.json";
 
@@ -12,7 +13,11 @@ function Pins() {
     <>
       {bounded_arr.map((pin) => {
         return (
-          <Marker position={[pin.Lat, pin.Lon]} key={pin.KF_Job_ID}></Marker>
+          <Marker
+            position={[pin.Lat, pin.Lon]}
+            key={pin.KF_Job_ID}
+            icon={HouseIcon}
+          ></Marker>
         );
       })}
     </>
