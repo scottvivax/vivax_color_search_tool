@@ -1,14 +1,17 @@
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import { useState } from "react";
 import { VivaxIcon } from "./Icons";
 import Pins from "./Pins";
 
 function Map() {
+  const [map, setMap] = useState(null);
   return (
     <>
       <MapContainer
         center={[39.73313, -105.01491]}
         zoom={13}
         scrollWheelZoom={true}
+        ref={setMap}
         style={{ height: "50vh", width: "90vw" }}
       >
         <TileLayer
@@ -20,7 +23,7 @@ function Map() {
             Vivax Pros <br /> 1050 Yuma St, Denver, CO 80204
           </Popup>
         </Marker>
-        <Pins />
+        {map ? <Pins map={map} /> : null}
       </MapContainer>
     </>
   );
