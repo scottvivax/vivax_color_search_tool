@@ -24,7 +24,11 @@ function Filter() {
       </div>
       <select>
         {substrates.map((substrate) => {
-          return <option value={substrate}>{substrate}</option>;
+          return (
+            <option value={substrate} key={substrate}>
+              {substrate}
+            </option>
+          );
         })}
       </select>
     </form>
