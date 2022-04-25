@@ -17,7 +17,7 @@ function Filter() {
   }, []);
 
   return (
-    <form>
+    <form className="filter_container">
       <div className="autocomplete">
         <input id="colorInput" type="text" placeholder="Enter a Color"></input>
       </div>
