@@ -35,10 +35,7 @@ function Pins({ map }) {
                 icon={HouseIcon}
               >
                 <Popup>
-                  <a
-                    target="_blank"
-                    href={`https://maps.google.com/?q=${pin.Address}+${pin.City}+${pin.State}+${pin.Zip}`}
-                  >
+                  <a target="_blank" href={`geo:${pin.Lat},${pin.Lon}`}>
                     {`${pin.Address}, ${pin.City}, ${pin.State} ${pin.Zip}`}
                   </a>
                 </Popup>
