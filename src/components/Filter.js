@@ -11,9 +11,8 @@ function Filter() {
     "Wood Painted Siding",
   ];
 
-  let colors = ["blue", "green", "yellow", "black"];
-
   useEffect(() => {
+    let colors = ["blue", "green", "yellow", "black"];
     autocomplete(document.getElementById("colorInput"), colors);
   }, []);
 
