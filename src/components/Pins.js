@@ -1,15 +1,14 @@
 import { Marker, Popup, useMap } from "react-leaflet";
 import { HouseIcon } from "./Icons";
 import bounded_pins from "../helpers/bounded_pins";
-import pins from "../data/watson_color_data_2022.json";
 import { useCallback, useState, useEffect } from "react";
 
-function Pins({ map }) {
+function Pins({ map, displayPins }) {
   const [bounded_arr, set_bounded_arr] = useState(null);
 
   const onMove = useCallback(() => {
     let bounds = map.getBounds().toBBoxString().split(",");
-    set_bounded_arr(bounded_pins(bounds, pins));
+    set_bounded_arr(bounded_pins(bounds, displayPins));
   });
 
   useEffect(() => {
@@ -20,8 +19,12 @@ function Pins({ map }) {
   }, [map, onMove]);
 
   useEffect(() => {
+    onMove();
+  }, [displayPins]);
+
+  useEffect(() => {
     let bounds = map.getBounds().toBBoxString().split(",");
-    set_bounded_arr(bounded_pins(bounds, pins));
+    set_bounded_arr(bounded_pins(bounds, displayPins));
   }, []);
 
   return (
@@ -41,6 +44,15 @@ function Pins({ map }) {
                   >
                     {`${pin.Address}, ${pin.City}, ${pin.State} ${pin.Zip}`}
                   </a>
+                  <br />
+                  <p>{`Substrate: ${pin.Substrate}`}</p>
+                  <p>{`Year Completed: ${pin.Complete}`}</p>
+
+                  {pin.Color.map((color) => {
+                    return (
+                      <p>{`${color.location}: ${color.color_name} - ${color.color_number}`}</p>
+                    );
+                  })}
                 </Popup>
               </Marker>
             );

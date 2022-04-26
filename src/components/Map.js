@@ -4,7 +4,7 @@ import { useState } from "react";
 import { VivaxIcon } from "./Icons";
 import Pins from "./Pins";
 
-function Map() {
+function Map({ displayPins }) {
   const [map, setMap] = useState(null);
   return (
     <>
@@ -25,7 +25,7 @@ function Map() {
             Vivax Pros <br /> 1050 Yuma St, Denver, CO 80204
           </Popup>
         </Marker>
-        {map ? <Pins map={map} /> : null}
+        {map ? <Pins map={map} displayPins={displayPins} /> : null}
       </MapContainer>
     </>
   );
