@@ -63,3 +63,16 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+.color_sample {
+  display: inline-block;
+  margin-left: 2px;
+  height: 10px;
+  width: 10px;
+  background-color: gray;
+}
+
+.color_names {
+  display: inline;
+  margin: 2px 0;
+}

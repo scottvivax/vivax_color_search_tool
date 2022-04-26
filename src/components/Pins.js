@@ -47,10 +47,15 @@ function Pins({ map, displayPins }) {
                   <br />
                   <p>{`Substrate: ${pin.Substrate}`}</p>
                   <p>{`Year Completed: ${pin.Complete}`}</p>
-
                   {pin.Color.map((color) => {
                     return (
-                      <p>{`${color.location}: ${color.color_name} - ${color.color_number}`}</p>
+                      <>
+                        <p className="color_names">
+                          {`${color.location}: ${color.color_name} - ${color.color_number}`}
+                        </p>
+                        <div className="color_sample"></div>
+                        <br />
+                      </>
                     );
                   })}
                 </Popup>
