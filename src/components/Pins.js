@@ -49,13 +49,13 @@ function Pins({ map, displayPins }) {
                   <p>{`Year Completed: ${pin.Complete}`}</p>
                   {pin.Color.map((color) => {
                     return (
-                      <>
+                      <div key={color.color_number}>
                         <p className="color_names">
                           {`${color.location}: ${color.color_name} - ${color.color_number}`}
                         </p>
                         <div className="color_sample"></div>
                         <br />
-                      </>
+                      </div>
                     );
                   })}
                 </Popup>

@@ -10,6 +10,7 @@ function AddressInput() {
         <input id="zip" placeholder="Zip"></input>
         <button>Submit</button>
       </form>
+      <p>Use your device's location!</p>
     </div>
   );
 }
