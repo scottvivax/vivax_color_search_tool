@@ -17,7 +17,7 @@ function search_address(map) {
           "Address was not located, please check the entered value."
         );
       } else {
-        map.setView([data[0].lat, data[0].lon], 15);
+        map.setView([data[0].lat, data[0].lon], 16);
       }
     });
 }

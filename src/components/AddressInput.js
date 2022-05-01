@@ -1,4 +1,5 @@
 import search_address from "../helpers/search_address";
+import get_current_loc from "../helpers/get_current_loc";
 
 function AddressInput({ map }) {
   return (
@@ -19,7 +20,14 @@ function AddressInput({ map }) {
           Submit
         </button>
       </form>
-      <p>Use your device's location!</p>
+      <p
+        onClick={(event) => {
+          event.preventDefault();
+          get_current_loc(map);
+        }}
+      >
+        Use your device's location!
+      </p>
     </div>
   );
 }
