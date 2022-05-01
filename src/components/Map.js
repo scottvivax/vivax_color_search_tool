@@ -4,8 +4,7 @@ import { useState } from "react";
 import { VivaxIcon } from "./Icons";
 import Pins from "./Pins";
 
-function Map({ displayPins }) {
-  const [map, setMap] = useState(null);
+function Map({ displayPins, map, setMap }) {
   return (
     <>
       <MapContainer

@@ -1,10 +1,10 @@
 import AddressInput from "./AddressInput";
 import FilterInput from "./FilterInput";
 
-function SideBar({ applyFilters }) {
+function SideBar({ applyFilters, map }) {
   return (
     <div className="sidebar_container">
-      <AddressInput />
+      <AddressInput map={map} />
       <FilterInput applyFilters={applyFilters} />
     </div>
   );

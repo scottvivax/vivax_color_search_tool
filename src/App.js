@@ -7,6 +7,7 @@ import "./style.css";
 
 function App() {
   const [displayPins, updateDisplayPins] = useState(pins);
+  const [map, setMap] = useState(null);
 
   function applyFilters() {
     let color = document.getElementById("colorInput").value;
@@ -15,8 +16,8 @@ function App() {
   }
   return (
     <div className="page_outline">
-      <SideBar applyFilters={applyFilters} />
-      <Map displayPins={displayPins} />
+      <SideBar applyFilters={applyFilters} map={map} />
+      <Map displayPins={displayPins} map={map} setMap={setMap} />
     </div>
   );
 }

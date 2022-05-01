@@ -1,4 +1,6 @@
-function AddressInput() {
+import search_address from "../helpers/search_address";
+
+function AddressInput({ map }) {
   return (
     <div>
       <h2>Search your Location</h2>
@@ -8,7 +10,14 @@ function AddressInput() {
           <option>CO</option>
         </select>
         <input id="zip" placeholder="Zip"></input>
-        <button>Submit</button>
+        <button
+          onClick={(event) => {
+            event.preventDefault();
+            search_address(map);
+          }}
+        >
+          Submit
+        </button>
       </form>
       <p>Use your device's location!</p>
     </div>
