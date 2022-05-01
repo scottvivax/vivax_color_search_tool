@@ -12,7 +12,8 @@ function App() {
   function applyFilters() {
     let color = document.getElementById("colorInput").value;
     let substrate = document.getElementById("substrateInput").value;
-    updateDisplayPins(filter_pins(pins, color, substrate));
+    let complete = parseInt(document.getElementById("compl_year").value);
+    updateDisplayPins(filter_pins(pins, color, substrate, complete));
   }
   return (
     <div className="page_outline">

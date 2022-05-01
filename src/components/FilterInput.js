@@ -38,6 +38,7 @@ function FilterInput({ applyFilters }) {
           })}
         </select>
         <select id="compl_year">
+          <option>All Years</option>
           <option>2021</option>
           <option>2020</option>
           <option>2019</option>

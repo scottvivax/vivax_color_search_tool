@@ -1,4 +1,4 @@
-function filter_pins(pins = [], color, substrate) {
+function filter_pins(pins = [], color, substrate, complete) {
   // color is color name, loc is body, trim, etc, type is painted siding, etc
 
   let sub_filter = [];
@@ -7,11 +7,17 @@ function filter_pins(pins = [], color, substrate) {
     ? (sub_filter = pins)
     : (sub_filter = pins.filter((d) => d.Substrate === substrate));
 
+  let year_filter = [];
+
+  complete === "All Years"
+    ? (year_filter = sub_filter)
+    : (year_filter = sub_filter.filter((d) => d.Complete === complete));
+
   let color_filter = [];
 
   color === ""
-    ? (color_filter = sub_filter)
-    : sub_filter.forEach((marker) => {
+    ? (color_filter = year_filter)
+    : year_filter.forEach((marker) => {
         if (
           marker.Color.filter(
             (d) => d.color_name.toUpperCase() === color.toUpperCase()
