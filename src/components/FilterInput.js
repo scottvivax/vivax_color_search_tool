@@ -1,5 +1,6 @@
 import autocomplete from "../helpers/search_autocomplete";
-import { useEffect, useState } from "react";
+import arrow_down from "../data/arrow-down-circle.svg";
+import { useEffect } from "react";
 
 function FilterInput({ applyFilters }) {
   let substrates = [
@@ -19,16 +20,20 @@ function FilterInput({ applyFilters }) {
 
   return (
     <div>
-      <h2 className="section_header">Filter</h2>
-      <form>
-        <div className="autocomplete">
+      <h2 className="section_header">
+        Filter <img src={arrow_down} className="collapse_btn" />
+      </h2>
+
+      <form className="form_collapse section_flex ">
+        <div className="autocomplete section_full_field">
           <input
             id="colorInput"
             type="text"
             placeholder="Enter a Color"
+            className="width_100"
           ></input>
         </div>
-        <select id="substrateInput">
+        <select id="substrateInput" className="section_full_field">
           {substrates.map((substrate) => {
             return (
               <option value={substrate} key={substrate}>
@@ -37,8 +42,8 @@ function FilterInput({ applyFilters }) {
             );
           })}
         </select>
-        <label>Year Painted</label>
-        <select id="compl_year">
+        <label className="section_half_field txt_wht">Year Painted</label>
+        <select id="compl_year" className="section_half_field">
           <option>All Years</option>
           <option>2021</option>
           <option>2020</option>

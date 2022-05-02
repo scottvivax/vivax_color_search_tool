@@ -1,11 +1,14 @@
 import search_address from "../helpers/search_address";
 import get_current_loc from "../helpers/get_current_loc";
+import arrow_down from "../data/arrow-down-circle.svg";
 
 function AddressInput({ map }) {
   return (
     <div>
-      <h2 className="section_header">Search your Location</h2>
-      <form className="section_flex">
+      <h2 className="section_header">
+        Search your Location <img src={arrow_down} className="collapse_btn" />
+      </h2>
+      <form className="section_flex form_collapse">
         <input
           id="address"
           className="section_full_field"
@@ -28,15 +31,18 @@ function AddressInput({ map }) {
         >
           Submit
         </button>
+        <p
+          className="txt_wht"
+          onClick={(event) => {
+            event.preventDefault();
+            get_current_loc(map);
+          }}
+        >
+          Click here to use
+          <br />
+          your device's location!
+        </p>
       </form>
-      <p
-        onClick={(event) => {
-          event.preventDefault();
-          get_current_loc(map);
-        }}
-      >
-        Use your device's location!
-      </p>
     </div>
   );
 }

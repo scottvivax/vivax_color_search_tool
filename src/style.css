@@ -9,11 +9,15 @@ body {
   background-color: var(--primary-muted);
 }
 
-/* Autocomplete Classes */
-.autocomplete {
-  position: relative;
-  width: 300px;
+input[type="text" i] {
+  padding: 0;
+  border-width: 0;
 }
+
+/* Autocomplete Classes */
+/* .autocomplete {
+  position: relative;
+} */
 
 .autocomplete-items {
   position: absolute;
@@ -90,10 +94,12 @@ body {
 
 .section_full_field {
   width: 90%;
+  margin: 5px 0;
 }
 
 .section_button {
   width: 80%;
+  margin-top: 5px;
   border-radius: 5px;
   border: var(--secondary-blue) 1px solid;
 }
@@ -102,4 +108,48 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.width_100 {
+  width: 100%;
+}
+
+.txt_wht {
+  color: var(--primary-muted);
+  text-align: center;
+}
+
+.collapse_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .page_outline {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .sidebar_container {
+    height: auto;
+    width: 90vw;
+    background-color: var(--secondary-blue);
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .map_container {
+    height: 80vh;
+    width: 90vw;
+    border-radius: 20px;
+    border: var(--secondary-blue) 2px solid;
+  }
+
+  .form_collapse {
+    display: none;
+  }
+
+  .collapse_btn {
+    display: inline;
+  }
 }
