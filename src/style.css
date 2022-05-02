@@ -77,3 +77,29 @@ body {
   display: inline;
   margin: 2px 0;
 }
+
+.section_header {
+  color: var(--primary-muted);
+  text-align: center;
+}
+
+.section_half_field {
+  width: 45%;
+  margin: 5px 0;
+}
+
+.section_full_field {
+  width: 90%;
+}
+
+.section_button {
+  width: 80%;
+  border-radius: 5px;
+  border: var(--secondary-blue) 1px solid;
+}
+
+.section_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

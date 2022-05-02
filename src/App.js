@@ -12,7 +12,7 @@ function App() {
   function applyFilters() {
     let color = document.getElementById("colorInput").value;
     let substrate = document.getElementById("substrateInput").value;
-    let complete = parseInt(document.getElementById("compl_year").value);
+    let complete = document.getElementById("compl_year").value;
     updateDisplayPins(filter_pins(pins, color, substrate, complete));
   }
   return (

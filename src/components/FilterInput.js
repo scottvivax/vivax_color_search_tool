@@ -19,7 +19,7 @@ function FilterInput({ applyFilters }) {
 
   return (
     <div>
-      <h2>Filter</h2>
+      <h2 className="section_header">Filter</h2>
       <form>
         <div className="autocomplete">
           <input
@@ -37,6 +37,7 @@ function FilterInput({ applyFilters }) {
             );
           })}
         </select>
+        <label>Year Painted</label>
         <select id="compl_year">
           <option>All Years</option>
           <option>2021</option>
@@ -48,6 +49,7 @@ function FilterInput({ applyFilters }) {
             event.preventDefault();
             applyFilters();
           }}
+          className="section_button"
         >
           Apply Filters
         </button>

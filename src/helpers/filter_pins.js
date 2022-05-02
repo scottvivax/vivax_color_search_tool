@@ -11,7 +11,9 @@ function filter_pins(pins = [], color, substrate, complete) {
 
   complete === "All Years"
     ? (year_filter = sub_filter)
-    : (year_filter = sub_filter.filter((d) => d.Complete === complete));
+    : (year_filter = sub_filter.filter(
+        (d) => d.Complete === parseInt(complete)
+      ));
 
   let color_filter = [];
 
