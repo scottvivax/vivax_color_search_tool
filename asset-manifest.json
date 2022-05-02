@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/vivax_color_search_tool/static/css/main.830b6d31.css",
-    "main.js": "/vivax_color_search_tool/static/js/main.0d6e257c.js",
+    "main.css": "/vivax_color_search_tool/static/css/main.c755fa6f.css",
+    "main.js": "/vivax_color_search_tool/static/js/main.853f0f87.js",
     "static/media/vivax_logo.png": "/vivax_color_search_tool/static/media/vivax_logo.82edb294b15baa5eb4c3.png",
     "static/media/house_pin.png": "/vivax_color_search_tool/static/media/house_pin.5a47b0171c54e47f2bff.png",
     "index.html": "/vivax_color_search_tool/index.html",
-    "main.830b6d31.css.map": "/vivax_color_search_tool/static/css/main.830b6d31.css.map",
-    "main.0d6e257c.js.map": "/vivax_color_search_tool/static/js/main.0d6e257c.js.map"
+    "static/media/arrow-down-circle.svg": "/vivax_color_search_tool/static/media/arrow-down-circle.b5795341f5b3a21a2e81473d9aa06ccf.svg",
+    "main.c755fa6f.css.map": "/vivax_color_search_tool/static/css/main.c755fa6f.css.map",
+    "main.853f0f87.js.map": "/vivax_color_search_tool/static/js/main.853f0f87.js.map"
   },
   "entrypoints": [
-    "static/css/main.830b6d31.css",
-    "static/js/main.0d6e257c.js"
+    "static/css/main.c755fa6f.css",
+    "static/js/main.853f0f87.js"
   ]
 }
