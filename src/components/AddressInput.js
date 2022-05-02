@@ -32,7 +32,7 @@ function AddressInput({ map }) {
           Submit
         </button>
         <p
-          className="txt_wht"
+          className="txt_wht custom_link"
           onClick={(event) => {
             event.preventDefault();
             get_current_loc(map);

@@ -119,6 +119,11 @@ input[type="text" i] {
   text-align: center;
 }
 
+.custom_link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .collapse_btn {
   display: none;
 }

@@ -1,8 +1,10 @@
 import autocomplete from "../helpers/search_autocomplete";
 import arrow_down from "../data/arrow-down-circle.svg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function FilterInput({ applyFilters }) {
+  let [collapseState, updateCollapseState] = useState("none");
+
   let substrates = [
     "All Substrates",
     "Painted Siding",
@@ -18,13 +20,33 @@ function FilterInput({ applyFilters }) {
     autocomplete(document.getElementById("colorInput"), colors);
   }, []);
 
+  function collapse_section() {
+    collapseState === "none"
+      ? updateCollapseState("flex")
+      : updateCollapseState("none");
+  }
+
+  useEffect(() => {
+    document
+      .getElementById("form_collapse")
+      .setAttribute("style", `display: ${collapseState}`);
+  }, [collapseState]);
+
   return (
     <div>
       <h2 className="section_header">
-        Filter <img src={arrow_down} className="collapse_btn" />
+        Filter
+        <img
+          src={arrow_down}
+          id="collapse_btn"
+          className="collapse_btn"
+          onClick={() => {
+            collapse_section();
+          }}
+        />
       </h2>
 
-      <form className="form_collapse section_flex ">
+      <form id="form_collapse" className="form_collapse section_flex ">
         <div className="autocomplete section_full_field">
           <input
             id="colorInput"
