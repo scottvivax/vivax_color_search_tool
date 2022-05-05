@@ -28,7 +28,7 @@ function FilterInput({ applyFilters }) {
 
   useEffect(() => {
     document
-      .getElementById("form_collapse")
+      .getElementById("collapse_filter")
       .setAttribute("style", `display: ${collapseState}`);
   }, [collapseState]);
 
@@ -46,7 +46,7 @@ function FilterInput({ applyFilters }) {
         />
       </h2>
 
-      <form id="form_collapse" className="form_collapse section_flex ">
+      <form id="collapse_filter" className="form_collapse section_flex ">
         <div className="autocomplete section_full_field">
           <input
             id="colorInput"

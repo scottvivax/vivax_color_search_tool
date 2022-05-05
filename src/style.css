@@ -139,8 +139,8 @@ input[type="text" i] {
     height: auto;
     width: 90vw;
     background-color: var(--secondary-blue);
-    flex-direction: row;
-    justify-content: space-evenly;
+    /* flex-direction: row;
+    justify-content: space-evenly; */
   }
 
   .map_container {
