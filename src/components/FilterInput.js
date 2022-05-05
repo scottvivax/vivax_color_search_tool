@@ -75,6 +75,7 @@ function FilterInput({ applyFilters }) {
           onClick={(event) => {
             event.preventDefault();
             applyFilters();
+            collapse_section();
           }}
           className="section_button"
         >

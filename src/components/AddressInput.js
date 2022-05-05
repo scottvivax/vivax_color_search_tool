@@ -47,6 +47,7 @@ function AddressInput({ map }) {
           onClick={(event) => {
             event.preventDefault();
             search_address(map);
+            collapse_section();
           }}
           className="section_button"
         >
@@ -57,6 +58,7 @@ function AddressInput({ map }) {
           onClick={(event) => {
             event.preventDefault();
             get_current_loc(map);
+            collapse_section();
           }}
         >
           Click here to use
