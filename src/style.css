@@ -192,4 +192,8 @@ input[type="text" i] {
   .filter_button {
     margin-bottom: 2vh;
   }
+
+  .header_hidden {
+    display: none;
+  }
 }

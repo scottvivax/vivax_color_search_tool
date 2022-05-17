@@ -1,7 +1,7 @@
 import AddressInput from "./AddressInput";
 import FilterInput from "./FilterInput";
 import menu_icon from "../data/list.svg";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function SideBar({ applyFilters, map }) {
   let [collapseState, updateCollapseState] = useState("none");

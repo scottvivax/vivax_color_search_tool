@@ -6,10 +6,10 @@ export default function Header() {
       <a href="https://www.vivaxpros.com">
         <img src={full_logo} className="header_logo"></img>
       </a>
-      <h3 className="header_contact">
+      <h3 className="header_contact header_hidden">
         Denver <br /> <a href="tel:7203319735">720-331-9735</a>
       </h3>
-      <h3>
+      <h3 className="header_hidden">
         Book a free <br /> estimate!
       </h3>
     </div>
