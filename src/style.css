@@ -148,7 +148,7 @@ input[type="text" i] {
   display: none;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1250px) {
   .page_outline {
     flex-direction: column;
     justify-content: space-evenly;
@@ -182,5 +182,14 @@ input[type="text" i] {
   .menu_icon {
     display: initial;
     height: 50px;
+  }
+
+  .section_flex {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .filter_button {
+    margin-bottom: 2vh;
   }
 }

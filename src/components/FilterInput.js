@@ -51,7 +51,7 @@ function FilterInput({ applyFilters }) {
             event.preventDefault();
             applyFilters();
           }}
-          className="section_button"
+          className="section_button filter_button"
         >
           Apply Filters
         </button>
