@@ -4,32 +4,10 @@ import arrow_down from "../data/arrow-down-circle.svg";
 import { useEffect, useState } from "react";
 
 function AddressInput({ map }) {
-  let [collapseState, updateCollapseState] = useState("none");
-  function collapse_section() {
-    collapseState === "none"
-      ? updateCollapseState("flex")
-      : updateCollapseState("none");
-  }
-
-  useEffect(() => {
-    document
-      .getElementById("collapse_add")
-      .setAttribute("style", `display: ${collapseState}`);
-  }, [collapseState]);
-
   return (
-    <div>
-      <h2 className="section_header">
-        Search your Location{" "}
-        <img
-          src={arrow_down}
-          className="collapse_btn"
-          onClick={() => {
-            collapse_section();
-          }}
-        />
-      </h2>
-      <form id="collapse_add" className="section_flex form_collapse">
+    <div id="address_section">
+      <h2 className="section_header">Search your Location </h2>
+      <form className="section_flex">
         <input
           id="address"
           className="section_full_field"
@@ -47,7 +25,6 @@ function AddressInput({ map }) {
           onClick={(event) => {
             event.preventDefault();
             search_address(map);
-            collapse_section();
           }}
           className="section_button"
         >
@@ -58,7 +35,6 @@ function AddressInput({ map }) {
           onClick={(event) => {
             event.preventDefault();
             get_current_loc(map);
-            collapse_section();
           }}
         >
           Click here to use

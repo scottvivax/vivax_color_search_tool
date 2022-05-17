@@ -170,16 +170,12 @@ input[type="text" i] {
     border: var(--secondary-blue) 0px solid;
   }
 
-  .form_collapse {
-    display: none;
-  }
-
-  .collapse_btn {
-    display: inline;
-  }
-
   h2 {
     margin: 1vh;
+  }
+
+  #address_section #filter_section {
+    display: none;
   }
 
   .menu_icon {
