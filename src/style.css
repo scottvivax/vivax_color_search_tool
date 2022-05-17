@@ -148,6 +148,11 @@ input[type="text" i] {
   display: none;
 }
 
+.no_dec {
+  text-decoration: none;
+  color: var(--secondary-blue);
+}
+
 @media screen and (max-width: 1250px) {
   .page_outline {
     flex-direction: column;
@@ -195,5 +200,13 @@ input[type="text" i] {
 
   .header_hidden {
     display: none;
+  }
+
+  .header_outline {
+    height: 10vh;
+  }
+
+  .header_logo {
+    height: 8vh;
   }
 }

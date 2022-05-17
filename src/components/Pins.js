@@ -53,7 +53,6 @@ function Pins({ map, displayPins }) {
                         <p className="color_names">
                           {`${color.location}: ${color.color_name} - ${color.color_number}`}
                         </p>
-                        <div className="color_sample"></div>
                         <br />
                       </div>
                     );
