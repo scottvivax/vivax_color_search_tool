@@ -1,7 +1,5 @@
 import search_address from "../helpers/search_address";
 import get_current_loc from "../helpers/get_current_loc";
-import arrow_down from "../data/arrow-down-circle.svg";
-import { useEffect, useState } from "react";
 
 function AddressInput({ map }) {
   return (

@@ -120,6 +120,7 @@ input,
 select,
 button {
   padding: 5px;
+  text-align: center;
 }
 
 .txt_wht {
@@ -140,7 +141,7 @@ button {
   width: 100vw;
   margin: 0;
   height: 15vh;
-  background-color: #dfdddd;
+  background-color: #ebebeb;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

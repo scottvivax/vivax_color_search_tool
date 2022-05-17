@@ -1,6 +1,5 @@
 import autocomplete from "../helpers/search_autocomplete";
-import arrow_down from "../data/arrow-down-circle.svg";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import colors from "../data/color_list_full";
 
 function FilterInput({ applyFilters }) {
