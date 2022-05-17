@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 function AddressInput({ map }) {
   return (
     <div id="address_section">
-      <h2 className="section_header">Search your Location </h2>
+      <h2 className="section_header">Find your Location </h2>
       <form className="section_flex">
         <input
           id="address"

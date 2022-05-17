@@ -174,7 +174,8 @@ input[type="text" i] {
     margin: 1vh;
   }
 
-  #address_section #filter_section {
+  #address_section,
+  #filter_section {
     display: none;
   }
 

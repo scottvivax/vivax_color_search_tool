@@ -1,6 +1,7 @@
 import autocomplete from "../helpers/search_autocomplete";
 import arrow_down from "../data/arrow-down-circle.svg";
 import { useEffect, useState } from "react";
+import colors from "../data/color_list_full";
 
 function FilterInput({ applyFilters }) {
   let substrates = [
@@ -14,13 +15,12 @@ function FilterInput({ applyFilters }) {
   ];
 
   useEffect(() => {
-    let colors = ["blue", "green", "yellow", "black", "Pure White"];
     autocomplete(document.getElementById("colorInput"), colors);
   }, []);
 
   return (
     <div id="filter_section">
-      <h2 className="section_header">Filter</h2>
+      <h2 className="section_header">Filter the Pins</h2>
       <form className="section_flex ">
         <div className="autocomplete section_full_field">
           <input
