@@ -21,13 +21,13 @@ function FilterInput({ applyFilters }) {
   return (
     <div id="filter_section">
       <h2 className="section_header">Filter the Pins</h2>
-      <form className="section_flex ">
+      <form className="section_flex">
         <div className="autocomplete section_full_field">
           <input
             id="colorInput"
             type="text"
             placeholder="Enter a Color"
-            className="width_100"
+            className="width_100 pad_5"
           ></input>
         </div>
         <select id="substrateInput" className="section_full_field">

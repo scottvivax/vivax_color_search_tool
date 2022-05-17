@@ -43,6 +43,7 @@ function SideBar({ applyFilters, map }) {
       ></img>
       <AddressInput map={map} />
       <FilterInput applyFilters={applyFilters} />
+      <button className="est_btn header_hidden">Get a free estimate!</button>
     </div>
   );
 }
