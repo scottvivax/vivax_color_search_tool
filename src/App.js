@@ -1,5 +1,6 @@
 import Map from "./components/Map";
 import SideBar from "./components/SideBar";
+import Header from "./components/Header";
 import pins from "./data/watson_color_data_2022.json";
 import filter_pins from "./helpers/filter_pins";
 import { useState } from "react";
@@ -16,10 +17,13 @@ function App() {
     updateDisplayPins(filter_pins(pins, color, substrate, complete));
   }
   return (
-    <div className="page_outline">
-      <SideBar applyFilters={applyFilters} map={map} />
-      <Map displayPins={displayPins} map={map} setMap={setMap} />
-    </div>
+    <>
+      <Header />
+      <div className="page_outline">
+        <SideBar applyFilters={applyFilters} map={map} />
+        <Map displayPins={displayPins} map={map} setMap={setMap} />
+      </div>
+    </>
   );
 }
 
