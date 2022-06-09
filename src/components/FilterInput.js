@@ -2,7 +2,7 @@ import autocomplete from "../helpers/search_autocomplete";
 import { useEffect } from "react";
 import colors from "../data/color_list_full";
 
-function FilterInput({ applyFilters }) {
+function FilterInput({ applyFilters, collapse }) {
   let substrates = [
     "All Substrates",
     "Painted Siding",
@@ -49,6 +49,7 @@ function FilterInput({ applyFilters }) {
           onClick={(event) => {
             event.preventDefault();
             applyFilters();
+            collapse();
           }}
           className="section_button filter_button"
         >

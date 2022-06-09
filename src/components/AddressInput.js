@@ -1,7 +1,7 @@
 import search_address from "../helpers/search_address";
 import get_current_loc from "../helpers/get_current_loc";
 
-function AddressInput({ map }) {
+function AddressInput({ map, collapse }) {
   return (
     <div id="address_section">
       <h2 className="section_header">Find your Location </h2>
@@ -23,6 +23,7 @@ function AddressInput({ map }) {
           onClick={(event) => {
             event.preventDefault();
             search_address(map);
+            collapse();
           }}
           className="section_button"
         >
@@ -33,6 +34,7 @@ function AddressInput({ map }) {
           onClick={(event) => {
             event.preventDefault();
             get_current_loc(map);
+            collapse();
           }}
         >
           Click here to use

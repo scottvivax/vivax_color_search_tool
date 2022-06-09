@@ -7,17 +7,19 @@ function SideBar({ applyFilters, map }) {
   let [collapseState, updateCollapseState] = useState("none");
 
   const collapse_section = () => {
-    collapseState === "none"
-      ? updateCollapseState("initial")
-      : updateCollapseState("none");
+    if (window.innerWidth <= 1250) {
+      collapseState === "none"
+        ? updateCollapseState("initial")
+        : updateCollapseState("none");
 
-    document
-      .getElementById("address_section")
-      .setAttribute("style", `display: ${collapseState}`);
+      document
+        .getElementById("address_section")
+        .setAttribute("style", `display: ${collapseState}`);
 
-    document
-      .getElementById("filter_section")
-      .setAttribute("style", `display: ${collapseState}`);
+      document
+        .getElementById("filter_section")
+        .setAttribute("style", `display: ${collapseState}`);
+    }
   };
 
   useEffect(() => {
@@ -41,8 +43,8 @@ function SideBar({ applyFilters, map }) {
         src={menu_icon}
         onClick={collapse_section}
       ></img>
-      <AddressInput map={map} />
-      <FilterInput applyFilters={applyFilters} />
+      <AddressInput map={map} collapse={collapse_section} />
+      <FilterInput applyFilters={applyFilters} collapse={collapse_section} />
     </div>
   );
 }
