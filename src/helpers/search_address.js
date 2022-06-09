@@ -1,4 +1,4 @@
-function search_address(map) {
+function search_address(map, _callback) {
   let address = document.getElementById("address").value;
   let state = document.getElementById("state").value;
   let zip = document.getElementById("zip").value;
@@ -18,6 +18,8 @@ function search_address(map) {
         );
       } else {
         map.setView([data[0].lat, data[0].lon], 16);
+        // return { lat: data[0].lat, lon: data[0].lon };
+        _callback({ lat: data[0].lat, lon: data[0].lon });
       }
     });
 }

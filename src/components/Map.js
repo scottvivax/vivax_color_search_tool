@@ -1,10 +1,14 @@
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
 import "../style.css";
-import { useState } from "react";
-import { VivaxIcon } from "./Icons";
+import { VivaxIcon, HouseIconRed } from "./Icons";
 import Pins from "./Pins";
 
-function Map({ displayPins, map, setMap }) {
+function Map({ displayPins, map, setMap, currLocPin }) {
+  let currLat = currLocPin.lat ? parseFloat(currLocPin.lat) : 0;
+  let currLon = currLocPin.lon ? parseFloat(currLocPin.lon) : 0;
+
+  console.log(currLat);
+
   return (
     <>
       <MapContainer
@@ -24,6 +28,13 @@ function Map({ displayPins, map, setMap }) {
           <Popup>
             Vivax Pros <br /> 1050 Yuma St, Denver, CO 80204
           </Popup>
+        </Marker>
+        <Marker
+          position={[currLat, currLon]}
+          icon={HouseIconRed}
+          key={currLocPin}
+        >
+          <Popup>Your Location</Popup>
         </Marker>
         {map ? <Pins map={map} displayPins={displayPins} /> : null}
       </MapContainer>

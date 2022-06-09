@@ -10,4 +10,9 @@ const HouseIcon = new L.Icon({
   iconSize: [45, 45],
 });
 
-export { VivaxIcon, HouseIcon };
+const HouseIconRed = new L.Icon({
+  iconUrl: require("../data/house_pin_red.png"),
+  iconSize: [45, 45],
+});
+
+export { VivaxIcon, HouseIcon, HouseIconRed };

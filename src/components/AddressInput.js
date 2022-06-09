@@ -1,7 +1,7 @@
 import search_address from "../helpers/search_address";
 import get_current_loc from "../helpers/get_current_loc";
 
-function AddressInput({ map, collapse }) {
+function AddressInput({ map, collapse, updateCurrLocPin }) {
   return (
     <div id="address_section">
       <h2 className="section_header">Find your Location </h2>
@@ -22,7 +22,7 @@ function AddressInput({ map, collapse }) {
         <button
           onClick={(event) => {
             event.preventDefault();
-            search_address(map);
+            search_address(map, updateCurrLocPin);
             collapse();
           }}
           className="section_button"
@@ -33,7 +33,7 @@ function AddressInput({ map, collapse }) {
           className="txt_wht custom_link"
           onClick={(event) => {
             event.preventDefault();
-            get_current_loc(map);
+            get_current_loc(map, updateCurrLocPin);
             collapse();
           }}
         >

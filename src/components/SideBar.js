@@ -3,7 +3,7 @@ import FilterInput from "./FilterInput";
 import menu_icon from "../data/list.svg";
 import { useState, useEffect } from "react";
 
-function SideBar({ applyFilters, map }) {
+function SideBar({ applyFilters, map, updateCurrLocPin }) {
   let [collapseState, updateCollapseState] = useState("none");
 
   const collapse_section = () => {
@@ -43,7 +43,11 @@ function SideBar({ applyFilters, map }) {
         src={menu_icon}
         onClick={collapse_section}
       ></img>
-      <AddressInput map={map} collapse={collapse_section} />
+      <AddressInput
+        map={map}
+        collapse={collapse_section}
+        updateCurrLocPin={updateCurrLocPin}
+      />
       <FilterInput applyFilters={applyFilters} collapse={collapse_section} />
     </div>
   );

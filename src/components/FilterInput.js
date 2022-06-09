@@ -7,6 +7,7 @@ function FilterInput({ applyFilters, collapse }) {
     "All Substrates",
     "Painted Siding",
     "Painted Board and Bat",
+    "Painted Brick",
     "Painted Stucco",
     "Vinyl",
     "Aluminum",

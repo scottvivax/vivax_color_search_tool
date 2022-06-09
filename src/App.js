@@ -10,6 +10,7 @@ import "./style.css";
 function App() {
   const [displayPins, updateDisplayPins] = useState(pins);
   const [map, setMap] = useState(null);
+  const [currLocPin, updateCurrLocPin] = useState("");
 
   function applyFilters() {
     let color = document.getElementById("colorInput").value;
@@ -21,8 +22,17 @@ function App() {
     <>
       <Header />
       <div className="page_outline">
-        <SideBar applyFilters={applyFilters} map={map} />
-        <Map displayPins={displayPins} map={map} setMap={setMap} />
+        <SideBar
+          applyFilters={applyFilters}
+          map={map}
+          updateCurrLocPin={updateCurrLocPin}
+        />
+        <Map
+          displayPins={displayPins}
+          map={map}
+          setMap={setMap}
+          currLocPin={currLocPin}
+        />
       </div>
     </>
   );

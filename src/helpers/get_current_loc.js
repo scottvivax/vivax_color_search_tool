@@ -1,7 +1,8 @@
-function get_current_loc(map) {
+function get_current_loc(map, _callback) {
   navigator.geolocation.getCurrentPosition(
     (loc) => {
       map.setView([loc.coords.latitude, loc.coords.longitude], 16);
+      _callback({ lat: loc.coords.latitude, lon: loc.coords.longitude });
     },
     () => {
       window.alert(
