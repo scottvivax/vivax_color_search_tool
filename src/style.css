@@ -172,7 +172,7 @@ button {
   padding: 6px;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 768px) {
   .page_outline {
     flex-direction: column;
     justify-content: space-evenly;
