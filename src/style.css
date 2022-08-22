@@ -67,6 +67,10 @@ input[type="text" i] {
   flex-direction: column;
   justify-content: space-evenly;
 }
+#address_section,
+#filter_section {
+  display: initial;
+}
 
 .color_sample {
   display: inline-block;
