@@ -7,7 +7,7 @@ function SideBar({ applyFilters, map, updateCurrLocPin }) {
   let [collapseState, updateCollapseState] = useState("none");
 
   const collapse_section = () => {
-    if (window.innerWidth <= 1250) {
+    if (window.innerWidth <= 768) {
       collapseState === "none"
         ? updateCollapseState("initial")
         : updateCollapseState("none");
@@ -23,7 +23,7 @@ function SideBar({ applyFilters, map, updateCurrLocPin }) {
   };
 
   useEffect(() => {
-    if (window.innerWidth <= 1250) {
+    if (window.innerWidth <= 768) {
       collapseState === "none"
         ? updateCollapseState("initial")
         : updateCollapseState("none");
