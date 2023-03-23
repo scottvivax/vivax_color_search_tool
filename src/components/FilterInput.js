@@ -42,9 +42,9 @@ function FilterInput({ applyFilters, collapse }) {
         <label className="section_half_field txt_wht">Year Painted</label>
         <select id="compl_year" className="section_half_field">
           <option>All Years</option>
+          <option>2022</option>
           <option>2021</option>
           <option>2020</option>
-          <option>2019</option>
         </select>
         <button
           onClick={(event) => {
