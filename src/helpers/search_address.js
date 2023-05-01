@@ -2,6 +2,10 @@ function search_address(map, _callback) {
   let address = document.getElementById("address").value;
   let state = document.getElementById("state").value;
   let zip = document.getElementById("zip").value;
+  console.log(`https://nominatim.openstreetmap.org/search?format=json&q=${address.replace(
+      " ",
+      "+"
+  )}+${state}+${zip}`);
   fetch(
     `https://nominatim.openstreetmap.org/search?format=json&q=${address.replace(
       " ",
@@ -9,6 +13,10 @@ function search_address(map, _callback) {
     )}+${state}+${zip}`
   )
     .then((res) => {
+      console.log(`https://nominatim.openstreetmap.org/search?format=json&q=${address.replace(
+          " ",
+          "+"
+      )}+${state}+${zip}`);
       return res.json();
     })
     .then((data) => {
