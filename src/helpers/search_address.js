@@ -10,13 +10,9 @@ function search_address(map, _callback) {
     `https://nominatim.openstreetmap.org/search?format=json&q=${address.replace(
       " ",
       "+"
-    )}+${state}+${zip}`
+    )}+${state}+${zip}&viewbox=37,41,25,32`
   )
     .then((res) => {
-      console.log(`https://nominatim.openstreetmap.org/search?format=json&q=${address.replace(
-          " ",
-          "+"
-      )}+${state}+${zip}`);
       return res.json();
     })
     .then((data) => {
